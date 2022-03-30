@@ -56,5 +56,4 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}
       - name: Docker run
         run: |
-          docker ps -q --filter "name=${{ env.NAME }}" | grep -q . && docker stop ${{ env.NAME }} && docker rm -fv ${{ env.NAME }}
           docker run -d -p 8080:8080 --name go_cicd --restart always ${{ env.DOCKER_IMAGE }}:${{ env.VERSION }}
