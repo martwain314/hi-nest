@@ -7,7 +7,7 @@ on:
   push:
     branches: [ main ]
 env:
-  DOCKER_IMAGE: ghcr.io/${{ github.actor }}/hi-nest
+  DOCKER_IMAGE: ghcr.io/martwain314/hi-nest
   VERSION: ${{ github.sha }}
   NAME: go_cicd
   
@@ -33,7 +33,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: martwain314
           password: ${{ secrets.GHCR_TOKEN }}
       - name: Build and push
         id: docker_build
@@ -52,7 +52,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: martwain314
           password: ${{ secrets.GHCR_TOKEN }}
       - name: Docker run
         run: |
