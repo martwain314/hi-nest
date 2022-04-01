@@ -17,6 +17,7 @@ let AppController = class AppController {
         this.appService = appService;
     }
     getHello() {
+        return this.appService.getHello();
     }
 };
 __decorate([
