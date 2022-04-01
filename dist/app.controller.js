@@ -17,6 +17,7 @@ let AppController = class AppController {
         this.appService = appService;
     }
     getHello() {
+        console.log("getHello 실행");
         return this.appService.getHello();
     }
 };
@@ -24,7 +25,7 @@ __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", String)
 ], AppController.prototype, "getHello", null);
 AppController = __decorate([
     (0, common_1.Controller)(),

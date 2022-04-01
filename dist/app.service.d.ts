@@ -1,4 +1,4 @@
 export declare class AppService {
-    getHello(): void;
+    getHello(): string;
     getUser(): string;
 }

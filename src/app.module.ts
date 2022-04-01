@@ -8,19 +8,7 @@ import { join } from 'path';
 import 'dotenv/config';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot({
-      // configuration 설정을 coifg module 불러 올 때 로드한다
-      isGlobal: true,
-      // load: [configuration],
-    }),
-    // TypeOrmModule.forRootAsync({
-    //   imports: [ConfigModule],
-    //   inject: [ConfigService],
-    //   useFactory: (config: ConfigService) => config.get('database'),
-    // }),
-    // TypeOrmModule.forFeature([User]),
-  ],
+  imports: [],
   controllers: [AppController],
   providers: [AppService],
 })
